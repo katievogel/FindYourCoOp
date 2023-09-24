@@ -1,0 +1,6 @@
+<h1>{{ survey_question.question_text }}</h1>
+<ul>
+    {% for survey_choice in survey_question.surveychoice_set.all %}
+        <li>{{ survey_choice.choice_text }}</li>
+    {% endfor %}
+<ul>
