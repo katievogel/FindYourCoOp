@@ -7,9 +7,9 @@ class Friend(models.Model):
     '''
     Class that manages the user instances, or 'friends'.
     '''
-    username = models.CharField(max_length = 50)
-    user_image = models.URLField()
-    survey_results = models.JSONField()
+    username = models.CharField(max_length = 50, default = None)
+    user_image = models.URLField(default = None)
+    survey_results = models.JSONField(default = None)
 
 class SurveyQuestion(models.Model):
     '''
