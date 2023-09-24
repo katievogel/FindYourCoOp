@@ -1,6 +1,7 @@
 from distutils.command.upload import upload
 from django.db import models
 
+#update in the terminal by running 'python manage.py shell'
 
 class Friend(models.Model):
     '''
@@ -23,3 +24,5 @@ class SurveyChoice(models.Model):
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length = 250)
     choice_value = models.IntegerField(default = 0)
+    def __str__(self):
+        return self.choice_text
